@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  coursedate: 2013-10-29
+  category: MyText
+  cost: 1.5
+  description: MyText
+  place: MyText
+  coursetime: 2013-10-29 12:28:46
+  teacher: MyString
+
+two:
+  coursedate: 2013-10-29
+  category: MyText
+  cost: 1.5
+  description: MyText
+  place: MyText
+  coursetime: 2013-10-29 12:28:46
+  teacher: MyString
