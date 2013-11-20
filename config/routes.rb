@@ -1,4 +1,39 @@
 Ohanasignup::Application.routes.draw do
+  root "courses#index"
+  # Routes for the Category resource:
+  # CREATE
+  get '/categories/new', controller: 'categories', action: 'new', as: 'new_category'
+  post '/categories', controller: 'categories', action: 'create', as: 'categories'
+
+  # READ
+  get '/categories', controller: 'categories', action: 'index'
+  get '/categories/:id', controller: 'categories', action: 'show', as: 'category'
+
+  # UPDATE
+  get '/categories/:id/edit', controller: 'categories', action: 'edit', as: 'edit_category'
+  patch '/categories/:id', controller: 'categories', action: 'update'
+
+  # DELETE
+  delete '/categories/:id', controller: 'categories', action: 'destroy'
+  #------------------------------
+
+  # Routes for the Slot resource:
+  # CREATE
+  get '/slots/new', controller: 'slots', action: 'new', as: 'new_slot'
+  post '/slots', controller: 'slots', action: 'create', as: 'slots'
+
+  # READ
+  get '/slots', controller: 'slots', action: 'index'
+  get '/slots/:id', controller: 'slots', action: 'show', as: 'slot'
+
+  # UPDATE
+  get '/slots/:id/edit', controller: 'slots', action: 'edit', as: 'edit_slot'
+  patch '/slots/:id', controller: 'slots', action: 'update'
+
+  # DELETE
+  delete '/slots/:id', controller: 'slots', action: 'destroy'
+  #------------------------------
+
 get("/signup", :controller => "pages" , :action => 'enroll')
 get("/list_of_classes", :controller => "pages" , :action => 'displaycourses')
 end
